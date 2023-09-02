@@ -1,7 +1,6 @@
-************************ Simple Calculator with Calculation History ************************
-                                     
+# Simple calculator made in C
+# Dias's version                                    
 This is a simple command-line calculator program written in C that allows users to perform basic arithmetic calculations, view a history of previous calculations, remove the calculation history.
-****************************************DIAS'S VERSION 1.0.0***************************************************
 ## Features
 
 Perform Calculations: You can perform addition, subtraction, multiplication, and  division operations on two numbers.
