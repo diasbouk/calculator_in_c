@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+
 char choice;
 // Function to creat history file where previous operations will be
 void history(char operation[1000]) {
@@ -23,7 +24,7 @@ void history(char operation[1000]) {
     // function to display history while programm is running
     // if history is empty ,  it'll say it is .
     void displayHistory() {
-        system("clear");
+       // system("clear"); 
     FILE *hptr = fopen("history.txt", "r");
     if (hptr == NULL) {
         printf("History is empty.\n");
@@ -46,7 +47,7 @@ float min(float fst, float scn) {
 
 //function that generates the operations .
 void calculator() {
-    system("clear");
+    // system("clear");
     char operator;
     float firstNum , secondNum , result = 0;
     printf("\n Type the first number : \n");
@@ -117,17 +118,18 @@ void factorialOperation() {
 }
 // Power function
 void powerOperation() {
-    int number , power;
+    float number ;
+    int power;
     printf("Give number and Power : \n");
-    scanf("%d\n%d" , &number , &power);
-    printf("%d ^ %d = %d\n" , number , power , number^power);
+    scanf("%f\n%d" , &number , &power);
+    printf("%f ^ %d = %.2f\n" , number , power , pow(number,power));
     char operation[1000];
-  snprintf(operation, sizeof(operation), "%d ^ %d = %d" , number , power , number^power);
+  snprintf(operation, sizeof(operation), "%f ^ %d = %.2f" , number , power , pow(number,power));
     history(operation);
 }
 // Square function 
 void squareOperation() {
-    system("clear");
+    // system("clear");
     double number;
     double result = sqrt(number);
     printf("Type the number :\n");
@@ -147,7 +149,7 @@ void otherOperations() {
     int factorial  = 1;
             
 
-     system("clear");
+     // system("clear");
     printf("Other options : \n\n");
     printf(" 1 > Modulo operation :  Only integers\n\n");
     printf(" 2 > Factorial Operation  : only integers \n\n");
@@ -189,12 +191,14 @@ int main() {
     printf("2 > Perform other operations :\n\n");
     printf("3 > see hsitory :\n\n");
     printf("4 > delete history:\n\n");
+    printf("5 > Clear  console:\n\n");
     scanf("\n%d" , &option);
     
     if(option == 1) calculator();
     else if(option == 2) otherOperations();
     else if(option == 3)  displayHistory();
     else if(option == 4) clearHistory();
+    else if(option == 5) system("clear");
     else return 0;
     }
     
