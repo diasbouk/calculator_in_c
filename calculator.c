@@ -85,8 +85,63 @@ void calculator() {
     snprintf(operation, sizeof(operation), "%.1f %c %.1f = %.1f", firstNum, operator, secondNum,result);
     history(operation);
     printf("\nif you want to leave press Ctrl + C\n");
+}
+ // operation of Modulo
+void moduloOperation() {
+    int num1 , num2;
+    char operation[1000];
+     printf("type the first and the second number :\n\n");
+    scanf("%d\n%d" , &num1 , &num2);
+    // Adding the operation to history
+    printf("%d Modulo %d  =  %d\n" ,num1 , num2 , num1 % num2);
+    snprintf(operation, sizeof(operation), "%d Modulo %d  =  %d", num1, num2,num1%num2);
+    history(operation);
+}
+// Factorial operation
+void factorialOperation() {
+    system("clear");
+    int number , i , count = 1;    
+ printf("Enter a number: ");    
+  scanf("%d",&number);
+  if(number == 0) printf("Modulo of 0 is 1\n");
+  else {
+    for(i=1;i<=number;i++){    
+      count = count * i;    
+  }    
+  printf("Factorial of %d is: %d\n", number , count);    
+  char operation[1000];
+  snprintf(operation, sizeof(operation), "Factorial of %d is %d ", number , count);
+    history(operation);
+  }
 
 }
+// Power function
+void powerOperation() {
+    int number , power;
+    printf("Give number and Power : \n");
+    scanf("%d\n%d" , &number , &power);
+    printf("%d ^ %d = %d\n" , number , power , number^power);
+    char operation[1000];
+  snprintf(operation, sizeof(operation), "%d ^ %d = %d" , number , power , number^power);
+    history(operation);
+}
+// Square function 
+void squareOperation() {
+    system("clear");
+    double number;
+    double result = sqrt(number);
+    printf("Type the number :\n");
+    scanf("%lf",&number);
+    if(number < 0)  printf("This number is negative !!\n");
+    else {
+        printf("the square of %lf is %.2lf \n" , number , result);
+        char operation[1000];
+  snprintf(operation, sizeof(operation), "the square of %lf is %.2lf" , number , result);
+    history(operation);
+    }
+}
+
+// Second options Menu
 void otherOperations() {
     int num1 , num2 , option , i;
     int factorial  = 1;
@@ -103,74 +158,25 @@ void otherOperations() {
     
     switch (option)
     {
-    case 1:
-        moduloFunction();
+        case 1:
+        moduloOperation();
         break;
-    case 2:
-        factorialFunction();
+        case 2:
+        factorialOperation();
+        break;
         case 3:
-        numberPowerFunction();
+        powerOperation();
+        break;
         case 4:
-        squareFunction();
+        squareOperation();
+        break;
     default:
         break;
     
     }
 
 }
- // operation of Modulo
-void moduloFunction() {
-    int num1 , num2;
-    char operation[1000];
-     printf("type the first and the second number :\n\n");
-    scanf("%d\n%d" , &num1 , &num2);
-    // Adding the operation to history
-    printf("%d Modulo %d  =  %d\n" ,num1 , num2 , num1 % num2);
-    snprintf(operation, sizeof(operation), "%d Modulo %d  =  %d", num1, num2,num1%num2);
-    history(operation);
-}
-// Factorial operation
-void factorialFunction() {
-    system("clear");
-    int i,fact=1,number;    
- printf("Enter a number: ");    
-  scanf("%d",&number);
-  if(number == 0) printf("Modulo of 0 is 1\n");
-  else {
-    for(i=1;i<=number;i++){    
-      fact=fact*i;    
-  }    
-  printf("Factorial of %d is: %d",number,fact);    
-  char operation[1000];
-  snprintf(operation, sizeof(operation), "Factorial of %d is %d ", number,fact);
-    history(operation);
-  }
 
-}
-// Power function
-void numberPowerFunction() {
-    int number , power;
-    printf("Give number and Power : \n");
-    scanf("%d\n%d" , &number , &power);
-    printf("%d ^ %d = %d\n" , number , power , number^power);
-    char operation[1000];
-  snprintf(operation, sizeof(operation), "%d ^ %d = %d" , number , power , number^power);
-    history(operation);
-}
-// Square function 
-void squareFunction() {
-    system("clear");
-    int number;
-    printf("Type the number :\n");
-    scanf("%d",&number);
-    if(number < 0)  printf("This number is negative !!\n");
-    else {
-        printf("the square of %d is %d \n" , number , sqrt(number));
-        char operation[1000];
-  snprintf(operation, sizeof(operation), "the square of %d is %d" , number , sqrt(number));
-    history(operation);
-    }
-}
 // The main function .
 
 int main() {  

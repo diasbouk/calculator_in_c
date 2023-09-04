@@ -4,6 +4,7 @@ This is a simple command-line calculator program written in C that allows users 
 ## Features
 
 Perform Calculations: You can perform addition, subtraction, multiplication, and  division operations on two numbers.
+Perform Other operations like square , power , modulo and factorial .
 
 View Calculation History: You can view a history of previous calculations, including the operator used and the result.
 
