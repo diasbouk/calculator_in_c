@@ -45,8 +45,8 @@ Remove Calculation History: If you want to start fresh, you can choose to remove
 
 
    # Running 
-   First compile
-   gcc  _displayHistory.c _history.c _operations.c _powerOperation.c _squareOperation.c _clearHistory.c _factorialOperation.c _moduloOperation.c _otherOperations.c calculator.c -o calculator -lm
+    First compile
+    gcc  _displayHistory.c _history.c _operations.c _powerOperation.c _squareOperation.c _clearHistory.c _factorialOperation.c _moduloOperation.c _otherOperations.c calculator.c -o calculator -lm
 
     Then type ./calculator on your terminal
 
