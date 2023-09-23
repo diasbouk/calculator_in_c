@@ -42,18 +42,16 @@ Remove Calculation History: If you want to start fresh, you can choose to remove
     This program is open-source. Feel free to modify and use it as needed.
 
 
-   # Commands 
-
-   gcc _displayHistory.c _history.c _operations.c _powerOperation.c _squareOperation.c _clearHistory.c _factorialOperation.c _moduloOperation.c _otherOperations.c calculator.c -o calculator -lm
 
 
    # Running 
+   First compile
+   gcc  _displayHistory.c _history.c _operations.c _powerOperation.c _squareOperation.c _clearHistory.c _factorialOperation.c _moduloOperation.c _otherOperations.c calculator.c -o calculator -lm
 
-    Just type ./calculator on your terminal
+    Then type ./calculator on your terminal
 
 ## Author
 
- > Hakim 
- > Achchar
+ > Hakim
  > Dias
 
