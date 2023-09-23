@@ -1,6 +1,6 @@
 #include "main.h"
 // clearing history function
-    void clearHistory() {
+    void _clearHistory() {
         system("clear");
         remove("history.txt");
         printf("History removed succesfully.\n");
