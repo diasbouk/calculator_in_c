@@ -1,26 +1,12 @@
 // Simple Calculator Programm 
 // takes numbers and operator as inputs and performes the operations
 // every operation is saved in history , and it can be cleared .
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include "main.h"
 
 
 char choice;
-// Function to creat history file where previous operations will be
-void history(char operation[1000]) {
-        FILE * hptr = fopen("history.txt" , "a+");
-        fprintf(hptr, " \n%s\n", operation);
-        fclose(hptr);
-    }
-    // clearing history function
-    void clearHistory() {
-        system("clear");
-        remove("history.txt");
-        printf("History removed succesfully.\n");
-        printf("File is lost.\n");
-        printf("Memory is saved.\n");
-    }
+
+    
     // function to display history while programm is running
     // if history is empty ,  it'll say it is .
     void displayHistory() {
