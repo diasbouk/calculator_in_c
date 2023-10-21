@@ -54,6 +54,6 @@ Remove Calculation History: If you want to start fresh, you can choose to remove
 
 ## Author
 
- > Hakim
- > Dias
+ > Hakim Achhar
+ > Dias Bouk
 
